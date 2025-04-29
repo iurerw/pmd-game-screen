@@ -7,7 +7,7 @@ type SecondaryCardProps = {
     name: string,
     nickname: string,
     imgUrl: string,
-    _class:string, 
+    _class: "warrior" | "mage", 
     hp: number,
     mp: number,
     level: number,
@@ -60,7 +60,7 @@ export default function SecondaryCard(this: any, {
   );
 }
 
-function getClass(_class:string){
+function getClass(_class:"warrior" | "mage"){
     switch(_class)
     {
       case "warrior": return <MaterialCommunityIcons name="sword" size={24} color="black" style={styles.class} />

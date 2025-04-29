@@ -33,8 +33,8 @@ export default function index() {
       name="Sophiala"
       nickname="@bestieee"
       imgUrl="https://i.ibb.co/7dh9kYv0/dragon.png"
-      _class="warrior"
-      hp={100}
+      _class="mage"
+      hp={60}
       mp={70}
       level={12}
       role="Leader"
@@ -43,7 +43,7 @@ export default function index() {
       name="DarKLink"
       nickname="@shadow"
       imgUrl="https://pm1.aminoapps.com/6360/3c6324d9d8901153eca1b2f459de7e55d59fb00e_hq.jpg"
-      _class="mage"
+      _class="warrior"
       hp={25}
       mp={50}
       level={10}

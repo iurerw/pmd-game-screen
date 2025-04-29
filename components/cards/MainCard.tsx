@@ -31,11 +31,11 @@ export default function MainCard({
 
         <View style={styles.statsContainer}>
           <View style={styles.icon}>
-            <MaterialCommunityIcons name="sword" size={24} color="black" />
+            <MaterialCommunityIcons name="sword"  size={24} color="black" />
           </View>
 
           <View style={styles.statsRight}>
-            <Text>{name}</Text>
+            <Text style={styles.name}>{name}</Text>
 
             <View style={styles.barContainer}>
               <View style={{ ...styles.bar, width: "80%" }} />
@@ -70,6 +70,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     aspectRatio: 1,
   },
+  name:{
+    fontWeight:"bold",
+  },
   barContainer: {
     width: "100%",
     height: 8,
@@ -87,7 +90,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgb(255 166 36)",
     width:"110%",
     height:"10%", 
-    marginBottom:-27,
+    marginBottom:-65,
     borderBottomLeftRadius:6,
     borderBottomRightRadius:6,
     justifyContent:"center"
