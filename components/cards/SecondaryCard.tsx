@@ -1,8 +1,8 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import React from "react";
 import Card from "../Card";
 import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
-
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 type SecondaryCardProps = {
     name: string,
     nickname: string,
@@ -10,7 +10,8 @@ type SecondaryCardProps = {
     _class:string, 
     hp: number,
     mp: number,
-    level: number
+    level: number,
+    role:string,
 }
 
 
@@ -21,7 +22,8 @@ export default function SecondaryCard(this: any, {
   _class, 
   hp, 
   mp,
-  level
+  level,
+  role
 }:SecondaryCardProps) {
 
   
@@ -29,7 +31,7 @@ export default function SecondaryCard(this: any, {
     <Card>
         <View style={styles.statsContainer}>
           <View style={styles.icon}>
-            <MaterialCommunityIcons name="sword" size={70} color="black" />
+            <Image source={{ uri: imgUrl }} width={100} height={100} />
           </View>
           <View style={styles.statsRight}>
             <Text style={styles.playerName}>{name}</Text>
@@ -50,7 +52,7 @@ export default function SecondaryCard(this: any, {
             </View>
             <View style={styles.cardFooter}>
               <Text style={styles.text}>Level {level}</Text>
-              <Text style={styles.text} >Leader</Text>
+              <Text style={styles.text}>{role}</Text>
             </View>
           </View>
         </View>
@@ -61,7 +63,8 @@ export default function SecondaryCard(this: any, {
 function getClass(_class:string){
     switch(_class)
     {
-      case "warrior": return _class == "warrior" ? <MaterialCommunityIcons name="sword" size={24} color="black" style={styles.class} />:<Text>none</Text>
+      case "warrior": return <MaterialCommunityIcons name="sword" size={24} color="black" style={styles.class} />
+      case "mage": return <FontAwesome name="fire" size={24} color="black" style={styles.class}/>
     }
 }
 const styles = StyleSheet.create({
@@ -94,6 +97,7 @@ const styles = StyleSheet.create({
   statsContainer: {
     flexDirection: "row",
     width: "100%",
+    gap:10
   },
   statsRight: {
     flex: 1,

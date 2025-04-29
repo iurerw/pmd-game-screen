@@ -15,7 +15,7 @@ export default function index() {
       <MainCard
         title="Vice Awakens"
         participating={3}
-        imgUrl="https://cdn-icons-png.flaticon.com/512/2603/2603009.png"
+        imgUrl="https://i.ibb.co/7dh9kYv0/dragon.png"
         name="Vice, The Shadow Wyrm"
         hp={1224}
         damageDone={21}
@@ -32,29 +32,32 @@ export default function index() {
       <SecondaryCard 
       name="Sophiala"
       nickname="@bestieee"
-      imgUrl=""
+      imgUrl="https://i.ibb.co/7dh9kYv0/dragon.png"
       _class="warrior"
       hp={100}
       mp={70}
       level={12}
+      role="Leader"
       />
       <SecondaryCard 
-      name="Sophiala"
-      nickname="@bestieee"
-      imgUrl=""
-      _class="warrior"
+      name="DarKLink"
+      nickname="@shadow"
+      imgUrl="https://pm1.aminoapps.com/6360/3c6324d9d8901153eca1b2f459de7e55d59fb00e_hq.jpg"
+      _class="mage"
       hp={25}
       mp={50}
-      level={12}
+      level={10}
+      role="Member"
       />
       <SecondaryCard 
-      name="Sophiala"
-      nickname="@bestieee"
-      imgUrl=""
-      _class="warrior"
+      name="Link"
+      nickname="@hyruleHero"
+      imgUrl="https://www.pngfind.com/pngs/m/48-483948_link-zelda-pixel-art-hd-png-download.png"
+      _class="mage"
       hp={70}
       mp={10}
-      level={12}
+      level={6}
+      role="Member"
       />
     </ScreenWrapper>
   );
